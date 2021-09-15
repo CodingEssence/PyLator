@@ -24,7 +24,7 @@ def InitColor(red = 0, green = 0, blue = 0, bold = False, dim = False, italic = 
     print(f'Try again; Your inputs were:\nRED: {red}\nGREEN: {green}\nBLUE: {blue}\n One of them was too high or too low.')
   else:
     print(f'\033[38;2;{red};{green};{blue}m')
-  os.system('clear')
+  clear()
   for i in range(2):
     if bold == True:
       print('\033[1m')
@@ -45,7 +45,7 @@ def InitColor(red = 0, green = 0, blue = 0, bold = False, dim = False, italic = 
     elif swap_foreground_and_bg_colors == True:
       print('\033[7m')
       clear()
-      break
+      break 
     elif hidden == True:
       print('\033[8m')
       clear()

@@ -4,14 +4,17 @@ from time import sleep
 import os
 # And functions
 from InitColor import InitColor
-
+# And the progress bar
+from ProgressBar import bar
 # Our prompt program
 def prompt(_):
   prompt = input(f'{_}\n>')
   sleep(0.7)
-  os.system('clear')
+  os.system('clea r')
   return prompt
+bar()
 #Our translator program
+
 def translate(convert_to = None, convert_from = None, text = None):
   InitColor(119, 255, 0)
   if convert_to:
@@ -32,12 +35,13 @@ def translate(convert_to = None, convert_from = None, text = None):
   else:
     InitColor(0,255,255)
     text = prompt(f'Text to be converted from {convert_from} to {convert_to}')
-        
+
   translation = Translator(to_lang=convert_to, from_lang = convert_from).translate(text).capitalize()
   InitColor(119, 255, 0)
   print(f'Translated text ({convert_to}):\n  {translation}')
   print('\033[38;2;255;119;0m')
   print(f'Original text ({convert_from}):\n  {text}')
+  print('\n\n\nt')
 
 # Running our code!
 translate()
