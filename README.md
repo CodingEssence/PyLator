@@ -22,5 +22,5 @@ The third part:
 Translation:
 ![Translation](https://storage.googleapis.com/replit/images/1632750013319_e6df42cfb44e3d4065f397c85651a374.png)
 
-And at the end, it will ask to do it again or not. `y` or `yes` to continue, or anything else to terminate the program
+And at the end, it will ask to do it again or not. `Y`  to continue, or anything else to terminate the program
 # So that's it for this post and I'll see you in my next post. Bye!
