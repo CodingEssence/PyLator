@@ -1,3 +1,4 @@
+
 from alive_progress import alive_bar, config_handler
 from time import sleep
 from random import randint
@@ -21,7 +22,7 @@ def chance():
     exit()
   else:
     print('We ran into an internal error... Please Wait')
-    sleep(randint(1, 5))
+    sleep(randint(1, 3))
     print('Error Fixed.')
     sleep(1.5)
     clear()
@@ -53,5 +54,5 @@ def bar(amount = 1000, starting_string = 'Initializing...', bar = 'bubbles', spi
         InitColor(red = 0, green = 255, blue = 0)
       sleep(0.01)
       Bar()
+    print('\033[38;2;255;255;0mStarting up PyLator')
   sleep(1.5)
-

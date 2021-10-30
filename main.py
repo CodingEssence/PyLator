@@ -1,4 +1,4 @@
-# Import all the needed modules
+6# Import all the needed modules
 from translate import Translator
 from time import sleep
 import os
@@ -10,15 +10,24 @@ from ProgressBar import bar
 def prompt(_):
   prompt = input(f'{_}\n>')
   sleep(0.7)
-  os.system('clea r')
+  os.system('clear')
   return prompt
-bar()
-#Our translator program
 
+# Our "do-it-again-or-not"(DIAON) program
+def DIAON():
+  sleep(2)
+  InitColor(255, 0,0)
+  A_or_N = input('Do you want translate more?')
+  if A_or_N == 'yes' or 'y' or 'Y' or 'Yes':
+    pass
+  else:
+    exit()
+
+# Our translator program
 def translate(convert_to = None, convert_from = None, text = None):
   InitColor(119, 255, 0)
   if convert_to:
-    pass 
+    pass
   else:
     convert_to = prompt('Language to be converted to (Default is english (en))')
     if not(convert_to):
@@ -41,7 +50,17 @@ def translate(convert_to = None, convert_from = None, text = None):
   print(f'Translated text ({convert_to}):\n  {translation}')
   print('\033[38;2;255;119;0m')
   print(f'Original text ({convert_from}):\n  {text}')
-  print('\n\n\nt')
 
 # Running our code!
-translate()
+# First our progress bar program
+# bar()
+while True:
+  translate()
+  input()
+  InitColor(255, 0,0)
+  A_or_N = input('Do you want translate more?[Y or N]\n>')
+  if A_or_N == 'Y':
+    pass
+  else:
+    quit()
+
